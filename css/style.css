@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Silkscreen', sans-serif;
-    background-image: url('../images/bg4.jpg'); /* Cambia por la ruta de tu imagen */
+    background-image: url('/images/bg4.jpg'); /* Cambia por la ruta de tu imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
