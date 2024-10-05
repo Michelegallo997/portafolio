@@ -93,7 +93,7 @@ body {
 
 .volumen{
     z-index: 500;
-    top: -10px;
+    top: 10px;
 }
 /* Estilos para las secciones */
 .section1 {
