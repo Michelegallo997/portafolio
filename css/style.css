@@ -156,6 +156,38 @@ body {
     max-width: 70%;
 
 }
+/* aqui comienza la seccion 3 */
+.section3 {
+    height: 900px; /* Altura de la sección 3 */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.msj_flotante3 {
+    position: relative;
+    top:-15% ;
+  left: -15%;
+  
+}
+.nube3 {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 270px; /* Ajusta el tamaño de la imagen dentro de la sección */
+    height: 270px;
+
+}
+
+/* Ajustes para el texto de la sección 3 */
+.text3 {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    font-size: 18px; /* Tamaño del texto */
+    position: absolute;
+    text-align: center;
+    max-width: 85%; /* Ajuste el ancho del texto dentro de la nube */
+}
 
 .autoShow{
     animation: autoShowAnimation both;
@@ -170,39 +202,10 @@ body {
         transform: translateY(0px) scale(1);
     }
 }
-.section3 {
-    height: 900px; /* Altura de la sección 3 */
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
 
 
 /* Estilos para la imagen de la nube en la sección 3 */
-.nube3 {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    width: 270px; /* Ajusta el tamaño de la imagen dentro de la sección */
-    height: 270px;
-    transform: translate(-85%, 15%);
-}
-
-/* Ajustes para el texto de la sección 3 */
-.text3 {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    font-size: 18px; /* Tamaño del texto */
-    line-height: 1.5;
-    color: black;
-    position: absolute;
-    left: 27%;
-    top: 45%; /* Ajustar según el diseño que prefieras */
-    z-index: 101; /* Asegura que el texto esté por encima de la nube */
-    text-align: center;
-    max-width: 15%; /* Ajuste el ancho del texto dentro de la nube */
-}
 
 
 
