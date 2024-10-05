@@ -95,9 +95,9 @@ body {
     z-index: 500;
     top: 10px;
 }
-/* Estilos para las secciones */
 
 
+/* seccion 1 */
 .section1 {
     height: 900px; /* Sección 1 tendrá una altura del 80% del viewport */
     position: relative; 
@@ -119,14 +119,42 @@ body {
 .section1 .msj_flotante .nube {
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    max-width: 40%; /* Ajusta el tamaño de la imagen dentro de la sección */
+    max-width: 40%; 
 }
+
+
+
+/* esto es toda la seccion 2 */
 .section2 {
     height: 1200PX; /* Sección 2 tendrá una altura del 60% del viewport */
-
     display: flex;
-    flex-direction: row;
     position: relative;
+}
+.section2 .descripcion{
+    
+    max-width: 37%;
+    margin: 1px 10px 1px 15px;
+    top: 50%;
+
+}
+.msj_flotante2 {
+    position: relative;
+    width: 50%; /* Asegura que el contenedor use el ancho completo */
+    height: auto;
+    left: -34%;
+    top: -26%;
+}
+.section2 .msj_flotante2 .nube2 {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 310px; /* Ajusta el tamaño de la imagen dentro de la sección */
+    height:230px;
+}
+.section2 .msj_flotante2 .text2 {
+    position: absolute;
+    font-size: 17px; /* Tamaño de texto ajustado para mejor legibilidad */
+    max-width: 85%;
+
 }
 
 .autoShow{
@@ -176,22 +204,8 @@ body {
     max-width: 15%; /* Ajuste el ancho del texto dentro de la nube */
 }
 
-.section2 .nube2 {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    width: 290px; /* Ajusta el tamaño de la imagen dentro de la sección */
-    height:270px;
-    box-shadow: 50px #000;
-    transform: translate(-180%, 75%);
 
-}
-.section2 .descripcion{
-    
-    max-width: 37%;
-    margin: 1px 10px 1px 15px;
-    top: 50%;
 
-}
 
 /* Ajustes para el texto */
 .text, .text2 {
@@ -205,14 +219,6 @@ body {
 }
 
 
-.section2 .text2 {
-    position: absolute;
-    left: 47%;
-    top:18%;
-    max-width: 18%; /* Ajuste el ancho del texto dentro de la nube */
-    padding: 10px;
-    z-index: 101; /* Asegura que el texto esté por encima de la imagen de fondo */
-}
 
 /* Fondo de la página */
 
