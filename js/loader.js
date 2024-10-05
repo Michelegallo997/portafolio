@@ -22,7 +22,7 @@ const volumeToggle = document.getElementById("volume-toggle");
 const volumeIcon = document.getElementById("volume-icon");
 
 // Reproducción automática al cargar
-backgroundMusic.volume = 0.5;
+backgroundMusic.volume = 0.3;
 backgroundMusic.play();
 
 // Alternar el volumen al hacer clic en el icono
