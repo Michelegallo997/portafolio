@@ -16,7 +16,7 @@ const scene1 = new THREE.Scene();
 let bee;
 let mixer;
 const loader = new GLTFLoader();
-loader.load('./waterbear_astronaut.glb',
+loader.load('/waterbear_astronaut.glb',
     function (gltf) {
         bee = gltf.scene;
         bee.position.x = 1;
