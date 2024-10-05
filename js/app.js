@@ -16,7 +16,7 @@ const scene1 = new THREE.Scene();
 let bee;
 let mixer;
 const loader = new GLTFLoader();
-loader.load('waterbear_astronaut.glb',
+loader.load('/waterbear_astronaut.glb',
     function (gltf) {
         bee = gltf.scene;
         bee.position.x = 1;
@@ -139,7 +139,7 @@ const scene2 = new THREE.Scene();
 let secondModel;
 let secondMixer;
 const secondLoader = new GLTFLoader();
-secondLoader.load('meteorite.glb',  // Cambia la ruta a tu segundo modelo (meteorito)
+secondLoader.load('/meteorite.glb',  // Cambia la ruta a tu segundo modelo (meteorito)
     function (gltf) {
         secondModel = gltf.scene;
         secondModel.position.x = -12;
