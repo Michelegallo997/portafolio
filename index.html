@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Menu Desplegable con Degradado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar con degradado azul -->
+    <nav class="bg-gradient-to-r from-black to-blue ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-lg font-bold text-white">
+                        Mi Logo
+                    </a>
+                </div>
+                <!-- Botón para el menú en dispositivos móviles -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-200 hover:bg-blue-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú</span>
+                        <!-- Icono de hamburguesa -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Links en desktop -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="#contact" class="text-white hover:text-gray-200">Contacto</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menú desplegable móvil -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#contact" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+            </div>
+        </div>
+    </nav>
+    <div id="container3D"></div>
+    <div id="container3D1"></div>
+    <audio id="background-music" src="play.mp3" controls loop>
+    </audio>
+    <audio id="typewriterSound" src="DigitalText2.mp3" preload="auto"></audio>
+
+    <!-- Sección 1 -->
+    <section class="section section1" id="banner">
+        <div class="msj_flotante flex items-center justify-center">
+            <div class="text" id="text1"></div>
+            <img class="nube numero1 flex justify-center" src="images/nube5.png" alt="nubeDeTexto">
+            <span class="next-arrow" onclick="showNextText(2)" id="arrow1" style="display: none;">&gt;</span>
+        </div>
+    </section>
+
+    <!-- Sección 2 -->
+    <section class="section section2" id="intro">
+        <div class="columna">
+            <img class="autoShow descripcion flex justify-left" src="images/des1.png" alt="descripcion">
+            <img class="autoShow descripcion flex justify-left" src="images/des2.png" alt="descripcion">
+            <img class="autoShow descripcion flex justify-left" src="images/des3.png" alt="descripcion">
+        </div>
+        <div class="text2" id="text2"></div>
+        <img class="nube2" src="images/nube5.png" alt="nubeDeTexto">
+        <span class="next-arrow" onclick="showNextText(3)" id="arrow2" style="display: none;">&gt;</span>
+    </section>
+
+    <!-- Sección 3 -->
+    <section class="section section3" id="description">
+        <div class="msj_flotante flex items-center justify-center">
+            <div class="text3" id="text3"></div>
+            <img class="nube3" src="images/nube5.png" alt="nubeDeTexto">
+            <span class="next-arrow" onclick="showNextText(4)" id="arrow3" style="display: none;">&gt;</span>
+        </div>
+    </section>
+
+    <!-- Sección de cards -->
+    <section class="section4 cards-container">
+        <div class="card">
+            <img src="images/image27.jpg" alt="Sharkie">
+            <h3>Sharkie</h3>
+            <div class="tags">
+                <span class="tag js">JavaScript</span>
+                <span class="tag html">HTML</span>
+                <span class="tag css">CSS</span>
+            </div>
+            <p>JavaScript based jump-and-run game</p>
+            <button class="live-view">Live View</button>
+        </div>
+
+        <div class="card">
+            <img src="images/image28.jpg" alt="Pokedex">
+            <h3>Pokedex</h3>
+            <div class="tags">
+                <span class="tag js">JavaScript</span>
+                <span class="tag api">API</span>
+                <span class="tag html">HTML</span>
+                <span class="tag css">CSS</span>
+            </div>
+            <p>A collection and description of all 898 Pokémon</p>
+            <button class="live-view">Live View</button>
+        </div>
+
+        <div class="card">
+            <img src="images/image29.jpg" alt="Portfolio 2022">
+            <h3>Portfolio 2022</h3>
+            <div class="tags">
+                <span class="tag webgl">WebGL</span>
+                <span class="tag js">JavaScript</span>
+                <span class="tag html">HTML</span>
+                <span class="tag css">CSS</span>
+            </div>
+            <p>My portfolio website, you're probably looking at right now.</p>
+            <button class="live-view">Live View</button>
+        </div>
+    </section>
+
+    <!-- Vincular el archivo JavaScript externo -->
+
+    <script src="/js/loader.js"></script>
+    <script type="module" src="/js/app.js"></script>
+    <script src="/js/text.js"></script>
+</body>
+</html>

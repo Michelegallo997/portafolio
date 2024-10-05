@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style2.css">
+    <title>Menu Desplegable con Degradado</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-900 to-black min-h-screen">
+
+    <!-- Navbar con degradado azul -->
+    <nav class="bg-gradient-to-r from-black to-purple-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-lg font-bold text-white">
+                        Mi Logo
+                    </a>
+                </div>
+                <!-- Botón para el menú en dispositivos móviles -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-200 hover:bg-blue-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú</span>
+                        <!-- Icono de hamburguesa -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Links en desktop -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="#contact" class="text-white hover:text-gray-200">Contacto</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menú desplegable móvil -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#contact" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de imágenes utilizando Flexbox -->
+    <section class="seccion2">
+        <div class="contain">
+            <img class="descripcion" src="images/des1.png" alt="descripcion">
+            <img class="descripcion" src="images/des2.png" alt="descripcion">
+            <img class="descripcion" src="images/des3.png" alt="descripcion">
+        </div>
+        <img class="nube2" src="images/nube5.png" alt="nubeDeTexto">
+    </section>
+
+    <!-- Vincular el archivo JavaScript externo -->
+    <script src="/js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+html {
+    scroll-behavior: auto;
+}
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Silkscreen', sans-serif;
+    background-image: url('/images/bg4.jpg'); /* Cambia por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* Estilos para el contenedor del loader */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Asegúrate de que esté por encima de otros elementos */
+}
+/* #background-music {
+    display: none;
+} */
+
+/* Loader */
+/* Contenedor del loader */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Loader */
+.loader {
+    width: 30px;
+    aspect-ratio: .577;
+    color: #fff; /* Loader blanco */
+    display: grid;
+    background:
+      linear-gradient(currentColor 0 0) top   /100% 1px,
+      linear-gradient(currentColor 0 0) bottom/100% 1px,
+      linear-gradient(to bottom right, #0000 calc(50% - 2px), currentColor calc(50% - 1px), #0000 50%) top/100% calc(100% + 2px),
+      linear-gradient(to bottom left , #0000 calc(50% - 2px), currentColor calc(50% - 1px), #0000 50%) top/100% calc(100% + 2px); 
+    background-repeat: no-repeat;
+    animation: l17 5s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    background: inherit;
+    border: inherit;
+    animation: inherit;
+}
+
+.loader::after {
+    animation-duration: 3s;
+}
+
+@keyframes l17 {
+    100% {transform: rotate(1turn)}
+}
+
+
+#container3D{
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+#container3D1{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+/* Estilos para las secciones */
+.section1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.section1 {
+    height: 900px; /* Sección 1 tendrá una altura del 80% del viewport */
+ /* Color de fondo claro para distinguirla */
+}
+
+.section2 {
+    height: 1200PX; /* Sección 2 tendrá una altura del 60% del viewport */
+
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+}
+@keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }to{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+.section3 {
+    height: 900px; /* Altura de la sección 3 */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* Estilos para la imagen de la nube en la sección 3 */
+.nube3 {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 270px; /* Ajusta el tamaño de la imagen dentro de la sección */
+    height: 270px;
+    transform: translate(-85%, 15%);
+}
+
+/* Ajustes para el texto de la sección 3 */
+.text3 {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    font-size: 18px; /* Tamaño del texto */
+    line-height: 1.5;
+    color: black;
+    position: absolute;
+    left: 27%;
+    top: 45%; /* Ajustar según el diseño que prefieras */
+    z-index: 101; /* Asegura que el texto esté por encima de la nube */
+    text-align: center;
+    max-width: 15%; /* Ajuste el ancho del texto dentro de la nube */
+}
+/* Estilos para las imágenes de la nube */
+.nube {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    max-width: 40%; /* Ajusta el tamaño de la imagen dentro de la sección */
+    box-shadow: 50px #000;
+    transform: translate(-70%, -70%);
+}
+.section2 .nube2 {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 290px; /* Ajusta el tamaño de la imagen dentro de la sección */
+    height:270px;
+    box-shadow: 50px #000;
+    transform: translate(-180%, 75%);
+
+}
+.section2 .descripcion{
+    
+    max-width: 37%;
+    margin: 1px 10px 1px 15px;
+    top: 50%;
+
+}
+
+/* Ajustes para el texto */
+.text, .text2 {
+    opacity: 0;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+    font-size: 18px; /* Tamaño de texto ajustado para mejor legibilidad */
+    line-height: 1.5; /* Aumentar espacio entre líneas para mejorar la legibilidad */
+    color: black;
+    max-width: 18%;
+}
+
+.section1 .text {
+    position: absolute;
+    top: 18%;
+    left: 28%;
+    text-align: center;
+    max-width: 15%; /* Ajuste el ancho del texto dentro de la nube */
+    z-index: 101; /* Asegura que el texto esté por encima de la imagen de fondo */
+}
+.section2 .text2 {
+    position: absolute;
+    left: 47%;
+    top:18%;
+    max-width: 18%; /* Ajuste el ancho del texto dentro de la nube */
+    padding: 10px;
+    z-index: 101; /* Asegura que el texto esté por encima de la imagen de fondo */
+}
+
+/* Fondo de la página */
+
+
+/* Contenedor de las cards */
+.section4{
+    z-index: 105;
+}
+
+.cards-container {
+ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo */
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 900px;
+    margin: auto;
+}
+
+/* Estilos para las cards */
+.card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 500px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    z-index: 105;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efecto hover */
+}
+
+/* Imagen dentro de la card */
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Títulos */
+.card h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Tags dentro de las cards */
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.tag.js { background-color: #f7df1e; }
+.tag.api { background-color: #8e44ad; }
+.tag.html { background-color: #e34c26; color: white; }
+.tag.css { background-color: #1572b6; color: white; }
+.tag.webgl { background-color: #ff5722; color: white; }
+
+/* Texto dentro de las cards */
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Botón Live View */
+.live-view {
+    background-color: #4CAF50; /* Verde claro */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.live-view:hover {
+    background-color: #66bb6a; /* Verde más claro al pasar el cursor */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* Las cards se apilan una debajo de otra en pantallas pequeñas */
+    }
+}
+.arrow-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.next-arrow {
+    font-size: 2rem;
+    color: #000;
+    cursor: pointer;
+    animation: pulse 1.2s infinite ease-in-out;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
