@@ -23,7 +23,7 @@ const volumeIcon = document.getElementById("volume-icon");
 
 // Reproducción automática cuando el usuario interactúa por primera vez
 document.addEventListener("click", function () {
-    backgroundMusic.volume = 0.3;
+    backgroundMusic.volume = 0.2;
     backgroundMusic.play();
 });
 

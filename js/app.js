@@ -10,6 +10,7 @@ const camera1 = new THREE.PerspectiveCamera(
     0.1,
     1000
 );
+
 camera1.position.z = 53;
 
 const scene1 = new THREE.Scene();
@@ -109,18 +110,29 @@ window.addEventListener('scroll', () => {
         modelMove();
     }
 });
-window.addEventListener('resize', () => {
-    renderer1.setSize(window.innerWidth, window.innerHeight);
-    camera1.aspect = window.innerWidth / window.innerHeight;
+
+// Ajustar el tamaño del modelo y la cámara en pantallas pequeñas
+const adjustForSmallScreens = () => {
+    if (window.innerWidth <= 425) {
+        // Ajustes específicos para pantallas pequeñas
+        camera1.fov = 50; // Ampliamos el campo de visión (FOV) para ver mejor el objeto
+        camera1.position.z = 75; // Alejamos la cámara un poco más
+    } else {
+        // Configuración normal para pantallas grandes
+        camera1.fov = 10;
+        camera1.position.z = 53;
+    }
     camera1.updateProjectionMatrix();
+    renderer1.setSize(window.innerWidth, window.innerHeight);
+};
+
+// Llamar a la función para ajustar en cada redimensionamiento de pantalla
+window.addEventListener('resize', () => {
+    adjustForSmallScreens();
 });
 
-
-
-
-
-
-
+// Llamar inicialmente para ajustar según el tamaño actual
+adjustForSmallScreens();
 
 
 
@@ -234,14 +246,3 @@ window.addEventListener('resize', () => {
     secondCamera.aspect = window.innerWidth / window.innerHeight;
     secondCamera.updateProjectionMatrix();
 });
-
-
-
-
-
-
-
-
-
-
-
