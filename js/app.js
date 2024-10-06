@@ -69,7 +69,7 @@ let arrPositionModel = [
     },
     {
         id: "contact",
-        position: { x: 0.8, y: -1, z: 0 },
+        position: { x: 0.8, y: -1, z: -90 },
         rotation: { x: 0.3, y: -0.5, z: 0 },
     },
 ];
@@ -234,3 +234,14 @@ window.addEventListener('resize', () => {
     secondCamera.aspect = window.innerWidth / window.innerHeight;
     secondCamera.updateProjectionMatrix();
 });
+
+
+
+
+
+
+
+
+
+
+

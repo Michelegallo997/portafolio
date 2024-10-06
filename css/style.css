@@ -81,7 +81,7 @@ body {
 #container3D{
     position: fixed;
     inset: 0;
-    z-index: 100;
+    z-index: -10;
     pointer-events: none;
 }
 #container3D1{
@@ -90,6 +90,13 @@ body {
     z-index: -1;
     pointer-events: none;
 }
+#container3D2{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
 
 .volumen{
     z-index: 500;
@@ -188,57 +195,18 @@ body {
     text-align: center;
     max-width: 85%; /* Ajuste el ancho del texto dentro de la nube */
 }
-
-.autoShow{
-    animation: autoShowAnimation both;
-    animation-timeline: view(70% 5%);
-}
-@keyframes autoShowAnimation{
-    from{
-        opacity: 0;
-        transform: translateY(200px) scale(0.3);
-    }to{
-        opacity: 1;
-        transform: translateY(0px) scale(1);
-    }
-}
-
-
-
-/* Estilos para la imagen de la nube en la sección 3 */
-
-
-
-
-/* Ajustes para el texto */
-.text, .text2 {
-    opacity: 0;
-    text-align: center;
-    transition: opacity 1s ease-in-out;
-    font-size: 18px; /* Tamaño de texto ajustado para mejor legibilidad */
-    line-height: 1.5; /* Aumentar espacio entre líneas para mejorar la legibilidad */
-    color: black;
-    max-width: 18%;
-}
-
-
-
-/* Fondo de la página */
-
-
-/* Contenedor de las cards */
 .section4{
-    z-index: 105;
+    background-color: #1572b6;
+    z-index: 130;
 }
 
 .cards-container {
- 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo */
     gap: 20px;
     padding: 20px;
     width: 100%;
-    height: 900px;
+    height: 700px;
     margin: auto;
 }
 
@@ -251,7 +219,7 @@ body {
     height: 500px;
     text-align: center;
     transition: transform 0.3s ease;
-    z-index: 105;
+    z-index: 140;
 }
 
 .card:hover {
@@ -316,6 +284,46 @@ body {
     background-color: #66bb6a; /* Verde más claro al pasar el cursor */
 }
 
+.autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+}
+@keyframes autoShowAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }to{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+
+
+/* Estilos para la imagen de la nube en la sección 3 */
+
+
+
+
+/* Ajustes para el texto */
+.text, .text2 {
+    opacity: 0;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+    font-size: 18px; /* Tamaño de texto ajustado para mejor legibilidad */
+    line-height: 1.5; /* Aumentar espacio entre líneas para mejorar la legibilidad */
+    color: black;
+    max-width: 18%;
+}
+
+
+
+/* Fondo de la página */
+
+
+/* Contenedor de las cards */
+
+
 /* Responsivo */
 @media (max-width: 768px) {
     .cards-container {
@@ -337,4 +345,8 @@ body {
 @keyframes pulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.3); }
+}
+
+footer{
+    z-index: 200;
 }
