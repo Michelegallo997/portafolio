@@ -114,24 +114,27 @@ window.addEventListener('scroll', () => {
 // Ajustar el tamaño del modelo y la cámara en pantallas pequeñas
 const adjustForSmallScreens = () => {
     if (window.innerWidth <= 425) {
-        // Ajustes específicos para pantallas pequeñas
-        camera1.fov = 50; // Ampliamos el campo de visión (FOV) para ver mejor el objeto
-        camera1.position.z = 75; // Alejamos la cámara un poco más
+        // Si la pantalla es menor o igual a 425px, mantén la configuración
+        camera1.fov = 50;  
+        camera1.position.z = 75;
     } else {
-        // Configuración normal para pantallas grandes
+        // Restablecer los valores normales para pantallas más grandes
         camera1.fov = 10;
         camera1.position.z = 53;
     }
+
     camera1.updateProjectionMatrix();
     renderer1.setSize(window.innerWidth, window.innerHeight);
 };
 
-// Llamar a la función para ajustar en cada redimensionamiento de pantalla
+// Evitar que se modifique en resoluciones menores a 425px
 window.addEventListener('resize', () => {
-    adjustForSmallScreens();
+    if (window.innerWidth >= 425) {
+        adjustForSmallScreens();
+    }
 });
 
-// Llamar inicialmente para ajustar según el tamaño actual
+// Llamada inicial para ajustar según el tamaño actual
 adjustForSmallScreens();
 
 
