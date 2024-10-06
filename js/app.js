@@ -69,7 +69,7 @@ let arrPositionModel = [
         rotation: { x: 0.7, y: -0.5, z: 0 },
     },
     {
-        id: "contact",
+        id: "corrusel",
         position: { x: 0.8, y: -1, z: -90 },
         rotation: { x: 0.3, y: -0.5, z: 0 },
     },
