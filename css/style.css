@@ -2,17 +2,19 @@
 html {
     scroll-behavior: auto;
 }
+
 /* Estilos generales */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Silkscreen', sans-serif;
-    background-image: url('../images/bg4.jpg'); /* Cambia por la ruta  tu imagen */
+    background-image: url('../images/bg4.jpg'); /* Cambia por la ruta de tu imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 /* Estilos para el contenedor del loader */
 .loader-container {
     position: fixed;
@@ -26,23 +28,9 @@ body {
     justify-content: center;
     z-index: 9999; /* Asegúrate de que esté por encima de otros elementos */
 }
+
 #background-music {
     display: none;
-}
-
-/* Loader */
-/* Contenedor del loader */
-.loader-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000; /* Fondo oscuro */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
 }
 
 /* Loader */
@@ -55,7 +43,7 @@ body {
       linear-gradient(currentColor 0 0) top   /100% 1px,
       linear-gradient(currentColor 0 0) bottom/100% 1px,
       linear-gradient(to bottom right, #0000 calc(50% - 2px), currentColor calc(50% - 1px), #0000 50%) top/100% calc(100% + 2px),
-      linear-gradient(to bottom left , #0000 calc(50% - 2px), currentColor calc(50% - 1px), #0000 50%) top/100% calc(100% + 2px); 
+      linear-gradient(to bottom left , #0000 calc(50% - 2px), currentColor calc(50% - 1px), #0000 50%) top/100% calc(100% + 2px);
     background-repeat: no-repeat;
     animation: l17 5s infinite linear;
 }
@@ -77,156 +65,198 @@ body {
     100% {transform: rotate(1turn)}
 }
 
-
-#container3D{
+#container3D {
     position: fixed;
     inset: 0;
     z-index: -10;
     pointer-events: none;
 }
-#container3D1{
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-}
-#container3D2{
+
+#container3D1 {
     position: fixed;
     inset: 0;
     z-index: -1;
     pointer-events: none;
 }
 
+#container3D2 {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
 
-.volumen{
+.volumen {
     z-index: 500;
     top: 50px !important;
 }
+.start-button-container {
+    position: relative; /* No es fixed */
+    margin-left: 20px;  /* Espaciado desde el lado izquierdo */
+    margin-top: 20px;  /* Añadir espacio desde la parte superior */
+    left: 90%;
+    top: 20px;
+}
 
+/* Estilo del botón Start */
+.start-button {
+    background-color: #030b23; /* Azul oscuro */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 32px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Alinea el ícono y el texto en el centro verticalmente */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+.start-button i {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+.start-button:hover {
+    background-color: #66bb6a; /* Verde más claro en hover */
+}
 /* seccion 1 */
 .section1 {
     height: 900px; /* Sección 1 tendrá una altura del 80% del viewport */
-    position: relative; 
+    position: relative;
     display: flex;
     width: 100%;
 }
+
 .section1 .msj_flotante {
     position: absolute;
     left: 10%;
     top: 13%;
 }
+
 .section1 .msj_flotante .text {
-    
     text-align: center;
     max-width: 25%;
- 
 }
+
 /* Estilos para las imágenes de la nube */
 .section1 .msj_flotante .nube {
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    max-width: 40%; 
+    max-width: 40%;
 }
-
-
 
 /* esto es toda la seccion 2 */
 .section2 {
-    height: 1200PX; /* Sección 2 tendrá una altura del 60% del viewport */
+    height: 1200PX;
     display: flex;
     position: relative;
 }
-.section2 .descripcion{
-    
+
+.section2 .descripcion {
     max-width: 40%;
     margin: 1px 10px 1px 15px;
     top: 50%;
-
 }
+
 .msj_flotante2 {
     position: relative;
-    width: 50%; /* Asegura que el contenedor use el ancho completo */
+    width: 50%;
     height: auto;
     left: -34%;
     top: -26%;
 }
+
 .section2 .msj_flotante2 .nube2 {
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    width: 310px; /* Ajusta el tamaño de la imagen dentro de la sección */
-    height:230px;
+    width: 310px;
+    height: 230px;
 }
+
 .section2 .msj_flotante2 .text2 {
     position: absolute;
-    font-size: 17px; /* Tamaño de texto ajustado para mejor legibilidad */
+    font-size: 17px;
     max-width: 70%;
-
 }
+
 /* aqui comienza la seccion 3 */
 .section3 {
-    height: 900px; /* Altura de la sección 3 */
-
+    height: 900px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
+
 .msj_flotante3 {
     position: relative;
-    top:-15% ;
-  left: -15%;
-  
+    top: -15%;
+    left: -15%;
 }
+
 .nube3 {
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    width: 270px; /* Ajusta el tamaño de la imagen dentro de la sección */
+    width: 270px;
     height: 270px;
-
 }
 
 /* Ajustes para el texto de la sección 3 */
 .text3 {
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    font-size: 18px; /* Tamaño del texto */
+    font-size: 18px;
     position: absolute;
     text-align: center;
-    max-width: 85%; /* Ajuste el ancho del texto dentro de la nube */
+    max-width: 85%;
 }
-.section4{
+
+/* Sección de cards convertida en carrusel */
+.section4 {
     background-color: #1572b6;
     z-index: 130;
 }
 
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo */
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    height: 700px;
-    margin: auto;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory; /* Detiene el scroll en cada card */
+    -webkit-overflow-scrolling: touch; /* Mejora la experiencia en móviles */
+    gap: 10px;
+    padding: 10px;
+    scroll-behavior: smooth; /* Scroll suave */
 }
 
-/* Estilos para las cards */
+.cards-container::-webkit-scrollbar {
+    width: 0; /* Ocultar la barra de desplazamiento */
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    align-items: stretch; /* Asegura que todas las cards se estiren verticalmente */
+}
+
 .card {
+    scroll-snap-align: start; /* Las cards se alinean al inicio del contenedor al hacer scroll */
+    flex: 250px; /* Asegura que todas las cards tengan el mismo ancho fijo */
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    height: 500px;
+    height: 500px; /* Asegura que todas las cards tengan la misma altura */
     text-align: center;
     transition: transform 0.3s ease;
-    z-index: 140;
+    display: flex;
+    flex-direction: column; /* Permite que el contenido interno se ajuste correctamente */
+    justify-content: space-between; /* Para que el contenido quede bien distribuido */
 }
 
 .card:hover {
-    transform: translateY(-10px); /* Efecto hover */
+    transform: translateY(-10px);
 }
 
-/* Imagen dentro de la card */
 .card img {
     width: 100%;
     height: 190px;
@@ -256,22 +286,40 @@ body {
     font-size: 0.8rem;
 }
 
-.tag.js { background-color: #f7df1e; }
-.tag.api { background-color: #8e44ad; }
-.tag.html { background-color: #e34c26; color: white; }
-.tag.css { background-color: #1572b6; color: white; }
-.tag.webgl { background-color: #ff5722; color: white; }
+.tag.js {
+    background-color: #f7df1e;
+}
+
+.tag.api {
+    background-color: #8e44ad;
+}
+
+.tag.html {
+    background-color: #e34c26;
+    color: white;
+}
+
+.tag.css {
+    background-color: #1572b6;
+    color: white;
+}
+
+.tag.webgl {
+    background-color: #ff5722;
+    color: white;
+}
 
 /* Texto dentro de las cards */
 .card p {
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 20px;
+    flex-grow: 1; /* Se asegura que el texto ocupe el espacio disponible */
 }
 
 /* Botón Live View */
 .live-view {
-    background-color: #4CAF50; /* Verde claro */
+    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -281,210 +329,96 @@ body {
 }
 
 .live-view:hover {
-    background-color: #66bb6a; /* Verde más claro al pasar el cursor */
+    background-color: #66bb6a;
+}
+/* Contenedor del botón "Back to Start" */
+.cards-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory; /* Detiene el scroll en cada card */
+    -webkit-overflow-scrolling: touch; /* Mejora la experiencia en móviles */
+
+    scroll-behavior: smooth; /* Scroll suave */
+     /* Añade espacio para que el botón no quede pegado */
 }
 
-.autoShow{
-    animation: autoShowAnimation both;
-    animation-timeline: view(70% 5%);
+.cards-container::-webkit-scrollbar {
+    width: 0; /* Ocultar la barra de desplazamiento */
 }
-@keyframes autoShowAnimation{
-    from{
-        opacity: 0;
-        transform: translateY(200px) scale(0.3);
-    }to{
-        opacity: 1;
-        transform: translateY(0px) scale(1);
+
+/* Contenedor del botón "Back to Start" */
+
+.back-to-start-wrapper {
+    background-color: #1572b6; /* Color de fondo igual al de la sección 4 */
+    padding: 0; /* Quita cualquier padding innecesario */
+    height: 100px;
+    margin: 0; /* Quita cualquier margen innecesario */
+}
+
+
+.back-to-start-container {
+    display: flex;
+    justify-content: center; /* Centrar el botón horizontalmente */ /* Espacio entre las cards y el botón */
+    width: 100%; 
+    /* Asegura que ocupe todo el ancho de la sección */
+}
+
+/* Estilos del botón */
+.back-to-start-button {
+    background-color: #4CAF50; /* Color verde */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+.back-to-start-button:hover {
+    background-color: #66bb6a; /* Color más claro cuando pasas el mouse */
+}
+
+/* Ajustes responsivos para asegurar que el botón se vea bien en todas las pantallas */
+@media (max-width: 768px) {
+    .back-to-start-button {
+        width: auto;
+        font-size: 1rem;
+        padding: 8px 16px;
     }
 }
 
+/* Contenedor general para los botones */
 
 
-/* Estilos para la imagen de la nube en la sección 3 */
-
-
-
-
-/* Ajustes para el texto */
-.text, .text2 {
-    opacity: 0;
-    text-align: center;
-    transition: opacity 1s ease-in-out;
-    font-size: 18px; /* Tamaño de texto ajustado para mejor legibilidad */
-    line-height: 1.5; /* Aumentar espacio entre líneas para mejorar la legibilidad */
-    color: black;
-    max-width: 18%;
-}
-
-
-
-/* Fondo de la página */
-
-
-/* Contenedor de las cards */
 
 
 /* Responsivo */
 @media (max-width: 768px) {
     .cards-container {
-        grid-template-columns: 1fr; /* Las cards se apilan una debajo de otra en pantallas pequeñas */
+        grid-template-columns: 1fr;
     }
 }
-.arrow-container {
-    display: flex;
-    justify-content: center;
-
+.autoShow {
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
 }
 
-.next-arrow {
-    font-size: 2rem;
-    color: #000;
-    cursor: pointer;
-    animation: pulse 1.2s infinite ease-in-out;
-}
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-}
-
-footer{
-    z-index: 200;
-}
-
-
-@media only screen and (max-width: 1024px) {
-    .section1 .msj_flotante {
-        left: -3%;
+@keyframes autoShowAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
     }
-    .section1 .msj_flotante .text {
-     font-size: 14px;
-    }
-    /* Estilos para las imágenes de la nube */
-    .section1 .msj_flotante .nube {
-        max-width: 30%; 
-    }
-    .section2 .descripcion{
-        max-width: 47%;
-    }
-    .msj_flotante2 {
-        width: 40%; 
-        left: -28%;
-        top: -28%;
-    }
-    .section2 .msj_flotante2 .nube2 {
-        max-width: 280px; 
-    }
-    .section2 .msj_flotante2 .text2 {
-        font-size: 14px; 
-        max-width: 80%;
-    }
-
-    .msj_flotante3 {
-    top:-20% ;
-    left: -20%;
-    }
-    .nube3 {
-    width: 250px; 
-    height: 250px;
-    }
-    .text3 {
-    font-size: 14px; 
-    }
-    .volumen{
-        z-index: 500;
-        top: 60px;
-    }
-}
-@media only screen and (max-width: 768px) {
-    .section1 .msj_flotante {
-        left: -15%;
-    }
-    .section1 .msj_flotante .text {
-     font-size: 13px;
-    }
-    /* Estilos para las imágenes de la nube */
-    .section1 .msj_flotante .nube {
-        max-width: 28%; 
-    }
-    .section2 .descripcion{
-        max-width: 47%;
-    }
-    .msj_flotante2 {
-        width: 20%; 
-        left: -28%;
-        top: -28%;
-    }
-    .section2 .msj_flotante2 .nube2 {
-        height: 250px;
-        max-width: 245px; 
-    }
-    .section2 .msj_flotante2 .text2 {
-        font-size: 12px; 
-        max-width: 100%;
-        
-    }
-
-    .msj_flotante3 {
-    top:-20% ;
-    left: -20%;
-    }
-    .nube3 {
-    width: 220px; 
-    height: 220px;
-    }
-    .text3 {
-    font-size: 13px; 
-    }
-    .volumen{
-        z-index: 500;
-        top: 30px;
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
     }
 }
 
-@media only screen and (max-width: 426px) {
-    .section1 .msj_flotante {
-        left: -50%;
+/* Responsivo */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
     }
-    .section1 .msj_flotante .text {
-     font-size: 10px;
-    }
-    /* Estilos para las imágenes de la nube */
-    .section1 .msj_flotante .nube {
-        max-width: 30%; 
-    }
-    .section2 .descripcion{
-        max-width: 90%;
-        transform: translateY(-20%);
-    }
-    .msj_flotante2 {
-        width: 40%; 
-        left: -18%;
-        top: -38%;
-    }
-    .next-arrow{
-       font-size:12px; 
-    }
-    .section2 .msj_flotante2 .nube2 {
-        height: 150px;
-        max-width: 150px; 
-        
-    }
-    .section2 .msj_flotante2 .text2 {
-        font-size: 9px; 
-        max-width: 100%;
-        
-    }
-
-    .msj_flotante3 {
-    top:-30% ;
-    left: -20%;
-    }
-    .nube3 {
-    width: 130px; 
-    height: 180px;
-    }
-    .text3 {
-    font-size: 10px; 
-    }
-
 }

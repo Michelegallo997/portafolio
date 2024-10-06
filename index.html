@@ -7,7 +7,7 @@
     <title>Menu Desplegable con Degradado</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body id="top">
     <div class="loader-container">
         <div class="loader"></div>
     </div>
@@ -60,7 +60,14 @@
             <i id="volume-icon" class="volumen fas fa-volume-up text-2xl text-white"></i>
         </button>
     </div>
-    
+
+    <div class="start-button-container">
+        <button id="refresh-button" class="start-button">
+            <i class="fas fa-play text-2xl mr-2"></i> Start
+        </button>
+    </div>
+</div>
+
     <!-- Sección 1 -->
   <!-- Sección 1 -->
 <section class="section section1" id="banner">
@@ -100,58 +107,66 @@
         </div>
     </section>
 
-    <!-- Sección de cards -->
     <section class="section section4 cards-container" id="contact">
-        <div class="card">
-            <img src="images/image27.jpg" alt="Sharkie">
-            <h3>Sharkie</h3>
-            <div class="tags">
-                <span class="tag js">JavaScript</span>
-                <span class="tag html">HTML</span>
-                <span class="tag css">CSS</span>
+        <div class="carousel">
+            <div class="card">
+                <img src="images/image27.jpg" alt="Sharkie">
+                <h3>Tinny Tales</h3>
+                <div class="tags">
+                    <span class="tag js">JavaScript</span>
+                    <span class="tag html">HTML</span>
+                    <span class="tag css">CSS</span>
+                </div>
+                <p>An interactive website with five pages dedicated to history and storytelling</p>
+                <button class="live-view">Live View</button>
             </div>
-            <p>JavaScript based jump-and-run game</p>
-            <button class="live-view">Live View</button>
+    
+            <div class="card">
+                <img src="images/image28.jpg" alt="Pokedex">
+                <h3>e-commerce</h3>
+                <div class="tags">
+                    <span class="tag js">JavaScript</span>
+                    <span class="tag api">API</span>
+                    <span class="tag html">HTML</span>
+                    <span class="tag css">CSS</span>
+                </div>
+                <p>An e-commerce website featuring a carousel on the homepage</p>
+                <button class="live-view">Live View</button>
+            </div>
+    
+            <div class="card">
+                <img src="images/image29.jpg" alt="Portfolio 2022">
+                <h3>Card Payment</h3>
+                <div class="tags">
+                    <span class="tag js">JavaScript</span>
+                    <span class="tag html">HTML</span>
+                    <span class="tag css">CSS</span>
+                </div>
+                <p>An interactive web page for card payment.</p>
+                <button class="live-view">Live View</button>
+            </div>
+    
+            <div class="card">
+                <img src="images/image30.jpg" alt="Portfolio 2022">
+                <h3>Portfolio 2024</h3>
+                <div class="tags">
+                    <span class="tag webgl">WebGL</span>
+                    <span class="tag js">JavaScript</span>
+                    <span class="tag html">HTML</span>
+                    <span class="tag css">CSS</span>
+                </div>
+                <p>My portfolio website, you're probably looking at right now.</p>
+                <button class="live-view">Live View</button>
+            </div>
         </div>
 
-        <div class="card">
-            <img src="images/image28.jpg" alt="Pokedex">
-            <h3>Pokedex</h3>
-            <div class="tags">
-                <span class="tag js">JavaScript</span>
-                <span class="tag api">API</span>
-                <span class="tag html">HTML</span>
-                <span class="tag css">CSS</span>
-            </div>
-            <p>A collection and description of all 898 Pokémon</p>
-            <button class="live-view">Live View</button>
-        </div>
-
-        <div class="card">
-            <img src="images/image29.jpg" alt="Portfolio 2022">
-            <h3>Portfolio 2022</h3>
-            <div class="tags">
-                <span class="tag webgl">WebGL</span>
-                <span class="tag js">JavaScript</span>
-                <span class="tag html">HTML</span>
-                <span class="tag css">CSS</span>
-            </div>
-            <p>My portfolio website, you're probably looking at right now.</p>
-            <button class="live-view">Live View</button>
-        </div>
-        <div class="card">
-            <img src="images/image30.jpg" alt="Portfolio 2022">
-            <h3>Portfolio 2022</h3>
-            <div class="tags">
-                <span class="tag webgl">WebGL</span>
-                <span class="tag js">JavaScript</span>
-                <span class="tag html">HTML</span>
-                <span class="tag css">CSS</span>
-            </div>
-            <p>My portfolio website, you're probably looking at right now.</p>
-            <button class="live-view">Live View</button>
-        </div>
     </section>
+         <!-- Botón Back to Start -->
+         <div class="back-to-start-wrapper">
+            <div class="back-to-start-container">
+                <a href="#top" class="back-to-start-button">Back to Start</a>
+            </div>
+        </div>
 
     <!-- Footer -->
     <footer class="bg-[#1c1075] py-8">

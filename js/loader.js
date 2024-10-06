@@ -42,3 +42,8 @@ volumeToggle.addEventListener("click", function () {
         volumeIcon.classList.replace("fa-volume-up", "fa-volume-off");
     }
 });
+
+document.getElementById('refresh-button').addEventListener('click', function() {
+    location.reload(); // Refresca la página
+});
+
