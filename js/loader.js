@@ -21,9 +21,16 @@ const backgroundMusic = document.getElementById("background-music");
 const volumeToggle = document.getElementById("volume-toggle");
 const volumeIcon = document.getElementById("volume-icon");
 
-// Reproducción automática al cargar
-backgroundMusic.volume = 0.3;
-backgroundMusic.play();
+// Reproducción automática cuando el usuario interactúa por primera vez
+document.addEventListener("click", function () {
+    backgroundMusic.volume = 0.3;
+    backgroundMusic.play();
+});
+
+// Verificar que la música esté lista antes de reproducir
+backgroundMusic.addEventListener('canplaythrough', function() {
+    backgroundMusic.play();
+}, false);
 
 // Alternar el volumen al hacer clic en el icono
 volumeToggle.addEventListener("click", function () {
