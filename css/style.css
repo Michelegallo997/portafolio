@@ -271,6 +271,7 @@ body {
     padding: 20px;
     height: 500px; /* Asegura que todas las cards tengan la misma altura */
     text-align: center;
+    align-items: center;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column; /* Permite que el contenido interno se ajuste correctamente */
