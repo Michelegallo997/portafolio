@@ -172,14 +172,14 @@ body {
 }
 .section2 .descripcion{
     
-    max-width: 40%;
-    margin: 1px 10px 1px 15px;
+    max-width: 45%;
+    margin: 1px 10px 5px 15px;
     top: 50%;
 
 }
 .msj_flotante2 {
     position: relative;
-    width: 50%; 
+    width: 55%; 
     height: auto;
     left: -34%;
     top: -26%;
@@ -187,8 +187,8 @@ body {
 .section2 .msj_flotante2 .nube2 {
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    width: 310px; 
-    height:230px;
+    width: 300px; 
+    height:250px;
 }
 .section2 .msj_flotante2 .text2 {
     position: absolute;
@@ -544,8 +544,8 @@ footer{
     }
 
     .card {
-        max-width: 440px;
-        transform: translateX(30%);
+        max-width: 400px;
+        transform: translateX(40%);
 
     }
 }
