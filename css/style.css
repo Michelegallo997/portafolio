@@ -544,8 +544,8 @@ footer{
     }
 
     .card {
-        max-width: 400px;
-        transform: translateX(40%);
+        max-width: 350px;
+        transform: translateX(54%);
 
     }
 }
