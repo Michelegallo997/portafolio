@@ -77,14 +77,14 @@ body {
     100% {transform: rotate(1turn)}
 }
 
-
+/* estilos para los modelos 3d */
 #container3D {
     position: fixed;
     inset: 0;
     z-index: -10;
     pointer-events: none;
     width: 100%;
-    height: 100vh; /* Asegura que ocupe toda la altura visible del dispositivo */
+    height: 100vh; 
 }
 #container3D1{
     position: fixed;
@@ -108,38 +108,38 @@ body {
 }
 
 .start-but-container {
-    position: relative; /* No es fixed */
-    margin-left: 20px;  /* Espaciado desde el lado izquierdo */
-    margin-top: 20px;  /* Añadir espacio desde la parte superior */
+    position: relative; 
+    margin-left: 20px;  
+    margin-top: 20px;  
 
 
 }
 
 /* Estilo del botón Start */
 .start-but {
-    background-color: #030b23; /* Azul oscuro */
+    background-color: #030b23; 
     color: white;
     padding: 10px 20px;
     border-radius: 32px;
     font-size: 0.9rem;
     font-weight: bold;
     display: flex;
-    align-items: center; /* Alinea el ícono y el texto en el centro verticalmente */
+    align-items: center; 
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .start-but i {
-    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    margin-right: 8px;
 }
 
 .start-but:hover {
-    background-color: #66bb6a; /* Verde más claro en hover */
+    background-color: #66bb6a; 
 }
 
 /* seccion 1 */
 .section1 {
-    height: 900px; /* Sección 1 tendrá una altura del 80% del viewport */
+    height: 900px;
     position: relative; 
     display: flex;
     width: 100%;
@@ -166,7 +166,7 @@ body {
 
 /* esto es toda la seccion 2 */
 .section2 {
-    height: 1200PX; /* Sección 2 tendrá una altura del 60% del viewport */
+    height: 1200PX; 
     display: flex;
     position: relative;
 }
@@ -179,7 +179,7 @@ body {
 }
 .msj_flotante2 {
     position: relative;
-    width: 50%; /* Asegura que el contenedor use el ancho completo */
+    width: 50%; 
     height: auto;
     left: -34%;
     top: -26%;
@@ -187,18 +187,18 @@ body {
 .section2 .msj_flotante2 .nube2 {
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    width: 310px; /* Ajusta el tamaño de la imagen dentro de la sección */
+    width: 310px; 
     height:230px;
 }
 .section2 .msj_flotante2 .text2 {
     position: absolute;
-    font-size: 17px; /* Tamaño de texto ajustado para mejor legibilidad */
+    font-size: 17px; 
     max-width: 70%;
 
 }
 /* aqui comienza la seccion 3 */
 .section3 {
-    height: 900px; /* Altura de la sección 3 */
+    height: 900px; 
 
     display: flex;
     justify-content: center;
@@ -223,17 +223,17 @@ body {
 .text3 {
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    font-size: 18px; /* Tamaño del texto */
+    font-size: 18px; 
     position: absolute;
     text-align: center;
-    max-width: 85%; /* Ajuste el ancho del texto dentro de la nube */
+    max-width: 85%; 
 }
 
 
 /* Estilos para la Sección 4 */
 
 .section4 {
-    background-color: #1572b6; /* Fondo del carrusel */
+    background-color: #1572b6; 
 }
 
 /* Contenedor del carrusel */
@@ -241,43 +241,42 @@ body {
 .cards-container {
     display: flex;
     align-items:end ;
-    scroll-snap-type: x mandatory; /* Detiene el scroll en cada card */
-    -webkit-overflow-scrolling: touch; /* Mejora la experiencia en móviles */
-    gap: 20px; /* Espacio entre las tarjetas */
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+    gap: 20px; 
     padding: 10px;
-    scroll-behavior: smooth; /* Scroll suave */
- /* Centramos el carrusel */
+    scroll-behavior: smooth; 
 }
 
 .carousel {
     display: flex;
     gap: 20px;
-    align-items: stretch; /* Asegura que todas las cards se estiren verticalmente */
-    justify-content: center; /* Centramos las tarjetas dentro del carrusel */
-    width: 100%; /* Para que el carrusel ocupe todo el ancho disponible */
+    align-items: stretch; 
+    justify-content: center; 
+    width: 100%; 
 }
 
 /* Pista del carrusel que contiene las tarjetas */
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease; /* Animación suave para el movimiento del carrusel */
+    transition: transform 0.5s ease; 
 }
 
 /* Estilos para las tarjetas (cards) dentro del carrusel */
 .card {
-    max-width: 280px;/* Las cards se alinean al inicio del contenedor al hacer scroll */
-    flex:0 0 100%; /* Asegura que todas las cards tengan el mismo ancho fijo */
+    max-width: 280px;
+    flex:0 0 100%; 
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    height: 500px; /* Asegura que todas las cards tengan la misma altura */
+    height: 500px; 
     text-align: center;
     align-items: center;
     transition: transform 0.3s ease;
     display: flex;
-    flex-direction: column; /* Permite que el contenido interno se ajuste correctamente */
-    justify-content: space-between; /* Para que el contenido quede bien distribuido */
+    flex-direction: column; 
+    justify-content: space-between; 
 }
 
 /* Estilos para los botones de navegación del carrusel */
@@ -295,22 +294,22 @@ body {
 }
 
 .carousel-control.prev {
-    left: 10px; /* Posiciona el botón "Prev" en la izquierda */
+    left: 10px; 
 }
 
 .carousel-control.next {
-    right: 10px; /* Posiciona el botón "Next" en la derecha */
+    right: 10px; 
 }
 
 .carousel-control:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Cambia de color al pasar el cursor */
+    background-color: rgba(0, 0, 0, 0.8); 
 }
 
 .back-to-start-wrapper {
-    background-color: #1572b6; /* Color de fondo igual al de la sección 4 */
-    padding: 0; /* Quita cualquier padding innecesario */
+    background-color: #1572b6; 
+    padding: 0;
     height: 100px;
-    margin: 0; /* Quita cualquier margen innecesario */
+    margin: 0;
 }
 
 .live-view {
@@ -352,9 +351,6 @@ body {
 }
 
 
-
-
-
 .autoShow{
     animation: autoShowAnimation both;
     animation-timeline: view(70% 5%);
@@ -372,8 +368,6 @@ body {
 
 
 
-
-
 /* Ajustes para el texto */
 .text, .text2 {
     opacity: 0;
@@ -386,14 +380,7 @@ body {
 }
 
 
-
-/* Fondo de la página */
-
-
-/* Contenedor de las cards */
-
-
-
+/* efecto pulso de la flecha */
 @keyframes pulse {
     0%, 100% {
       transform: scale(1);
@@ -409,11 +396,18 @@ body {
     display: inline-block; /* Asegúrate de que se comporte como un elemento en línea */
     transition: transform 0.2s ease-in-out; /* Añade una transición para suavizar */
   }
+
+
+/* style footer */
 footer{
     z-index: 200;
 }
 
 
+
+
+
+/* responsive website mediaquery */
 @media only screen and (max-width: 1024px) {
     .section1 .msj_flotante {
         left: -3%;
@@ -464,7 +458,7 @@ footer{
     .section1 .msj_flotante .text {
      font-size: 13px;
     }
-    /* Estilos para las imágenes de la nube */
+
     .section1 .msj_flotante .nube {
         max-width: 28%; 
     }
@@ -510,7 +504,6 @@ footer{
     .section1 .msj_flotante .text {
      font-size: 10px;
     }
-    /* Estilos para las imágenes de la nube */
     .section1 .msj_flotante .nube {
         max-width: 30%; 
     }
