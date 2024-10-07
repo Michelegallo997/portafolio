@@ -42,7 +42,8 @@
         <!-- Menú desplegable móvil -->
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#contact" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+                <a href="#corrusel" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Work</a>
+                <a href="#contact" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             </div>
         </div>
     </nav>
@@ -62,8 +63,8 @@
         </button>
     </div>
 
-    <div class="start-button-container">
-        <button id="refresh-button" class="start-button">
+    <div class="start-but-container">
+        <button id="refresh-button" class="start-but">
             <i class="fas fa-play text-2xl mr-2"></i> Start
         </button>
     </div>
@@ -108,61 +109,69 @@
         </div>
     </section>
 
-    <section class="section section4 cards-container" id="corrusel">
-        <div class="carousel">
-            <div class="card">
-                <img src="images/image27.jpg" alt="Sharkie">
-                <h3>Tinny Tales</h3>
-                <div class="tags">
-                    <span class="tag js">JavaScript</span>
-                    <span class="tag html">HTML</span>
-                    <span class="tag css">CSS</span>
+    <section class="section4 flex justify-center items-center py-10 relative overflow-hidden" id="corrusel">
+        <button class="carousel-control prev absolute left-0 transform -translate-y-1/2 top-1/2 text-white bg-black bg-opacity-50 px-2 py-1 rounded hover:bg-opacity-75">&#10094;</button>
+        <div class="carousel-track flex space-x-4  max-w-6xl  px-4 transition-transform duration-300">
+            <!-- Tarjeta 1 -->
+            <div class="card   bg-white p-4 rounded-lg shadow-lg">
+                <img src="images/image27.jpg" alt="Sharkie" class="rounded-t-lg w-full h-48 object-cover">
+                <h3 class="text-xl  my-2">Tinny Tales</h3>
+                <div class="tags flex flex-wrap gap-2 mb-2">
+                    <span class="bg-yellow-400 text-black px-2 py-1 rounded">JavaScript</span>
+                    <span class="bg-red-600 text-white px-2 py-1 rounded">HTML</span>
+                    <span class="bg-blue-500 text-white px-2 py-1 rounded">CSS</span>
                 </div>
-                <p>An interactive website with five pages dedicated to history and storytelling</p>
+                <p class="text-gray-600 mb-4">An interactive website with five pages dedicated to history and storytelling</p>
                 <a href="https://michelegallo997.github.io/scss_michele" class="live-view">Live View</a>
             </div>
-            
-            <div class="card">
-                <img src="images/image28.jpg" alt="Pokedex">
-                <h3>e-commerce</h3>
-                <div class="tags">
-                    <span class="tag js">JavaScript</span>
-                    <span class="tag api">API</span>
-                    <span class="tag html">HTML</span>
-                    <span class="tag css">CSS</span>
+    
+            <!-- Tarjeta 2 -->
+            <div class="card   bg-white p-4 rounded-lg shadow-lg">
+                <img src="images/image28.jpg" alt="Pokedex" class="rounded-t-lg w-full h-48 object-cover">
+                <h3 class="text-xl  my-2">e-commerce</h3>
+                <div class="tags flex flex-wrap gap-2 mb-2">
+                    <span class="bg-yellow-400 text-black px-2 py-1 rounded">JavaScript</span>
+                    <span class="bg-purple-600 text-white px-2 py-1 rounded">API</span>
+                    <span class="bg-red-600 text-white px-2 py-1 rounded">HTML</span>
+                    <span class="bg-blue-500 text-white px-2 py-1 rounded">CSS</span>
                 </div>
-                <p>An e-commerce website featuring a carousel on the homepage</p>
+                <p class="text-gray-600 mb-4">An e-commerce website featuring a carousel on the homepage</p>
                 <a href="https://michelegallo997.github.io/e-commerce" class="live-view">Live View</a>
             </div>
-            
-            <div class="card">
-                <img src="images/image29.jpg" alt="Portfolio 2022">
-                <h3>Card Payment</h3>
-                <div class="tags">
-                    <span class="tag js">JavaScript</span>
-                    <span class="tag html">HTML</span>
-                    <span class="tag css">CSS</span>
+    
+            <!-- Tarjeta 3 -->
+            <div class="card   bg-white p-4 rounded-lg shadow-lg">
+                <img src="images/image29.jpg" alt="Portfolio 2022" class="rounded-t-lg w-full h-48 object-cover">
+                <h3 class="text-xl  my-2">Card Payment</h3>
+                <div class="tags flex flex-wrap gap-2 mb-2">
+                    <span class="bg-yellow-400 text-black px-2 py-1 rounded">JavaScript</span>
+                    <span class="bg-red-600 text-white px-2 py-1 rounded">HTML</span>
+                    <span class="bg-blue-500 text-white px-2 py-1 rounded">CSS</span>
                 </div>
-                <p>An interactive web page for card payment.</p>
+                <p class="text-gray-600 mb-4">An interactive web page for card payment.</p>
                 <a href="https://michelegallo997.github.io/paycard" class="live-view">Live View</a>
             </div>
-            
-            <div class="card">
-                <img src="images/image30.jpg" alt="Portfolio 2022">
-                <h3>Portfolio 2024</h3>
-                <div class="tags">
-                    <span class="tag webgl">WebGL</span>
-                    <span class="tag js">JavaScript</span>
-                    <span class="tag html">HTML</span>
-                    <span class="tag css">CSS</span>
+    
+            <!-- Tarjeta 4 -->
+            <div class="card   bg-white p-4 rounded-lg shadow-lg">
+                <img src="images/image30.jpg" alt="Portfolio 2022" class="rounded-t-lg w-full h-48 object-cover">
+                <h3 class="text-xl  my-2">Portfolio 2024</h3>
+                <div class="tags flex flex-wrap gap-2 mb-2">
+                    <span class="bg-orange-500 text-white px-2 py-1 rounded">WebGL</span>
+                    <span class="bg-yellow-400 text-black px-2 py-1 rounded">JavaScript</span>
+                    <span class="bg-red-600 text-white px-2 py-1 rounded">HTML</span>
+                    <span class="bg-blue-500 text-white px-2 py-1 rounded">CSS</span>
                 </div>
-                <p>My portfolio website, you're probably looking at right now.</p>
+                <p class="text-gray-600 mb-4">My portfolio website, you're probably looking at right now.</p>
                 <a href="https://michelegallo997.github.io/portafolio" class="live-view">Live View</a>
             </div>
             
+            
         </div>
-
+        <button class="carousel-control next absolute right-0 transform -translate-y-1/2 top-1/2 text-white bg-black bg-opacity-50 px-2 py-1 rounded hover:bg-opacity-75">&#10095;</button>
     </section>
+    
+    
          <!-- Botón Back to Start -->
          <div class="back-to-start-wrapper">
             <div class="back-to-start-container">
