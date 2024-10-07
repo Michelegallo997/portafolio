@@ -11,7 +11,7 @@ const audio = document.getElementById('typewriterSound');
 
 const firstText = "Oh wow... ";
 const secondText = "it's been a while since someone visited this place!";
-const thirdText = "Come with me, I'll show you the place!";
+const thirdText = "Come with me, I'll show you the spot!";
 const fourthText = "This is the person you're looking for. I know what you're thinking: what a silly face.";
 const fifthText = "If this is their avatar, I don't even want to imagine them in person.";
 const sixthText = "Well, putting aside his ugly head, he's done some incredible work!";
