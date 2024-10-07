@@ -115,7 +115,7 @@ window.addEventListener('scroll', () => {
 const adjustForSmallScreens = () => {
     if (window.innerWidth <= 425) {
         // Si la pantalla es menor o igual a 425px, mantén la configuración
-        camera1.fov = 50;  
+        camera1.fov = 30;  
         camera1.position.z = 75;
     } else {
         // Restablecer los valores normales para pantallas más grandes
