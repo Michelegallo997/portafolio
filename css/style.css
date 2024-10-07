@@ -400,6 +400,7 @@ body {
   }
   
   .next-arrow {
+    color: red;
     animation: pulse 1.5s infinite ease-in-out;
     display: inline-block; /* Asegúrate de que se comporte como un elemento en línea */
     transition: transform 0.2s ease-in-out; /* Añade una transición para suavizar */
