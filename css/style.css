@@ -264,7 +264,8 @@ body {
 
 /* Estilos para las tarjetas (cards) dentro del carrusel */
 .card {
-    max-width: 280px;
+    max-width:350px;
+    transform: translateX(-50%);
     flex:0 0 100%; 
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
@@ -542,4 +543,9 @@ footer{
     font-size: 10px; 
     }
 
+    .card {
+        max-width: 440px;
+        transform: translateX(30%);
+
+    }
 }
