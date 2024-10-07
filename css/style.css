@@ -100,7 +100,7 @@ body {
 
 .volumen{
     z-index: 500;
-    top: 50px !important;
+    top: 60px !important;
 }
 
 .start-but-container {
@@ -394,7 +394,7 @@ body {
     0%, 100% {
       transform: scale(1);
     }
-    50% {
+    30% {
       transform: scale(1.2);
     }
   }
