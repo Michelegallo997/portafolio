@@ -249,3 +249,35 @@ window.addEventListener('resize', () => {
     secondCamera.aspect = window.innerWidth / window.innerHeight;
     secondCamera.updateProjectionMatrix();
 });
+
+
+// Función para ajustar el modelo 3D solo en dispositivos móviles en modo horizontal
+const adjustForOrientation = () => {
+    const isLandscape = window.innerWidth > window.innerHeight;
+    const isMobile = window.innerWidth <= 580; // Consideramos que es móvil si el ancho es menor o igual a 768px
+
+    if (isMobile && isLandscape) {
+        // Si el dispositivo es móvil y está en modo horizontal
+        camera1.fov = 15; // Ajustamos el campo de visión (fov) para vista horizontal
+        camera1.position.z = 60; // Alejamos la cámara para que no se vea desconfigurado
+    } else if (isMobile && !isLandscape) {
+        // Si el dispositivo es móvil y está en modo vertical
+        camera1.fov = 23;  
+        camera1.position.z = 50;
+    } else {
+        // Para dispositivos que no son móviles o resoluciones más grandes
+        camera1.fov = 10; // Campo de visión original para pantallas más grandes
+        camera1.position.z = 53; // Posición original de la cámara
+    }
+
+    camera1.updateProjectionMatrix();
+    renderer1.setSize(window.innerWidth, window.innerHeight);
+};
+
+// Escucha para detectar cambios en la orientación
+window.addEventListener('resize', () => {
+    adjustForOrientation();
+});
+
+// Llamada inicial para asegurarse de que el ajuste se aplique desde el principio
+adjustForOrientation();
