@@ -259,7 +259,7 @@ const adjustForOrientation = () => {
     if (isMobile && isLandscape) {
         // Si el dispositivo es móvil y está en modo horizontal
         camera1.fov = 50; // Ajustamos el campo de visión (fov) para vista horizontal
-        camera1.position.z = 50; // Alejamos la cámara para que no se vea desconfigurado
+        camera1.position.z = 20; // Alejamos la cámara para que no se vea desconfigurado
     } else if (isMobile && !isLandscape) {
         // Si el dispositivo es móvil y está en modo vertical
         camera1.fov = 23;  
