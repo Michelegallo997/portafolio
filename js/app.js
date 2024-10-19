@@ -113,13 +113,6 @@ window.addEventListener('scroll', () => {
 
 // Ajustar el tamaño del modelo y la cámara en pantallas pequeñas
 
-// Evitar que se modifique en resoluciones menores a 425px
-window.addEventListener('resize', () => {
-    if (window.innerWidth >= 425) {
-        adjustForSmallScreens();
-    }
-});
-
 // Llamada inicial para ajustar según el tamaño actual
 adjustForSmallScreens();
 
