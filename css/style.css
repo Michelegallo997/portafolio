@@ -498,7 +498,7 @@ footer{
     }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 581px) {
     .section1 .msj_flotante {
         left: -45%;
     }
