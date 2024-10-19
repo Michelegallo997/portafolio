@@ -263,7 +263,7 @@ const adjustForOrientation = () => {
     } else if (isMobile && !isLandscape) {
         // Si el dispositivo es móvil y está en modo vertical
         camera1.fov = 20;  
-        camera1.position.z = 40;
+        camera1.position.z = 20;
     } else {
         // Para dispositivos que no son móviles o resoluciones más grandes
         camera1.fov = 11; // Campo de visión original para pantallas más grandes
