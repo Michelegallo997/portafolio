@@ -112,6 +112,27 @@ window.addEventListener('scroll', () => {
 });
 
 // Ajustar el tamaño del modelo y la cámara en pantallas pequeñas
+const adjustForSmallScreens = () => {
+    if (window.innerWidth <= 425) {
+        // Si la pantalla es menor o igual a 425px, mantén la configuración
+        camera1.fov = 23;  
+        camera1.position.z = 63;
+    } else {
+        // Restablecer los valores normales para pantallas más grandes
+        camera1.fov = 10;
+        camera1.position.z = 53;
+    }
+
+    camera1.updateProjectionMatrix();
+    renderer1.setSize(window.innerWidth, window.innerHeight);
+};
+
+// Evitar que se modifique en resoluciones menores a 425px
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 425) {
+        adjustForSmallScreens();
+    }
+});
 
 // Llamada inicial para ajustar según el tamaño actual
 adjustForSmallScreens();
@@ -238,10 +259,10 @@ const adjustForOrientation = () => {
     if (isMobile && isLandscape) {
         // Si el dispositivo es móvil y está en modo horizontal
         camera1.fov = 20; // Ajustamos el campo de visión (fov) para vista horizontal
-        camera1.position.z = 60; // Alejamos la cámara para que no se vea desconfigurado
+        camera1.position.z = 50; // Alejamos la cámara para que no se vea desconfigurado
     } else if (isMobile && !isLandscape) {
         // Si el dispositivo es móvil y está en modo vertical
-        camera1.fov = 25;  
+        camera1.fov = 20;  
         camera1.position.z = 40;
     } else {
         // Para dispositivos que no son móviles o resoluciones más grandes
