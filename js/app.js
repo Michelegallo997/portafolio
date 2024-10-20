@@ -264,7 +264,7 @@ const adjustForOrientation = () => {
         camera1.position.z = 55;  // Ajustamos la cámara más lejana
     } else if (isMobile && !isLandscape) {
         // Si el dispositivo es móvil y está en modo vertical
-        camera1.fov = 13;  
+        camera1.fov = 14;  
         camera1.position.z = 63;  // Ajuste moderado para vista vertical
     } else {
         // Para dispositivos que no son móviles o resoluciones más grandes
