@@ -192,28 +192,27 @@
     <footer class="bg-[#1c1075] py-8" id="contact">
         <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-4xl font-bold text-[#ffff] mb-4">Contact me</h2>
-            <form class="space-y-4">
-                <div>
-                    <label for="name" class="block text-[#565656] text-sm font-semibold">Name :</label>
-                    <input type="text" id="name" class="w-full px-4 py-2 bg-[#F4F4F4] rounded-lg border-none focus:outline-none">
-                </div>
-                <div>
-                    <label for="email" class="block text-[#565656] text-sm font-semibold">Email :</label>
-                    <input type="email" id="email" class="w-full px-4 py-2 bg-[#F4F4F4] rounded-lg border-none focus:outline-none">
-                </div>
-                <div>
-                    <label for="message" class="block text-[#565656] text-sm font-semibold">Message :</label>
-                    <textarea id="message" rows="5" class="w-full px-4 py-2 bg-[#F4F4F4] rounded-lg border-none focus:outline-none"></textarea>
-                </div>
-                <div class="flex justify-between items-center">
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/Michelegallo997" class="text-gray-500 hover:text-gray-700"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/michelegiovannygallo" class="text-gray-500 hover:text-gray-700"><i class="fab fa-linkedin"></i></a>
-                       
-                    </div>
-                    <button type="submit" class="bg-[#FF8C42] text-white font-semibold px-6 py-2 rounded-full">Submit</button>
-                </div>
-            </form>
+         <!-- Formulario de Contacto -->
+<!-- Formulario de Contacto -->
+<form action="https://formspree.io/f/manynwdl" method="POST" class="space-y-4">
+    <div>
+        <label for="name" class="block text-[#565656] text-sm font-semibold">Name :</label>
+        <input type="text" id="name" name="name" class="w-full px-4 py-2 bg-[#F4F4F4] rounded-lg border-none focus:outline-none" required>
+    </div>
+    <div>
+        <label for="email" class="block text-[#565656] text-sm font-semibold">Email :</label>
+        <input type="email" id="email" name="email" class="w-full px-4 py-2 bg-[#F4F4F4] rounded-lg border-none focus:outline-none" required>
+    </div>
+    <div>
+        <label for="message" class="block text-[#565656] text-sm font-semibold">Message :</label>
+        <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 bg-[#F4F4F4] rounded-lg border-none focus:outline-none" required></textarea>
+    </div>
+    <div class="flex justify-between items-center">
+        <button type="submit" class="bg-[#FF8C42] text-white font-semibold px-6 py-2 rounded-full">Send</button>
+    </div>
+</form>
+
+
         </div>
     </footer>
 
