@@ -255,20 +255,20 @@ window.addEventListener('resize', () => {
 
 // Función para ajustar el modelo 3D en dispositivos móviles cuando cambia la orientación
 const adjustForOrientation = () => {
-    const isLandscape = window.innerWidth > window.innerHeight;
-    const isMobile = window.innerWidth <= 768; // Móvil si el ancho es menor o igual a 768px
+    const isLandscape = window.matchMedia("(orientation: landscape)").matches; // Detectar si está en modo horizontal
+    const isMobile = window.innerWidth <= 768; // Consideramos que es móvil si el ancho es menor o igual a 768px
 
     if (isMobile && isLandscape) {
-        // Modo horizontal en móviles
-        camera1.fov = 20;  // Ajuste moderado del FOV en horizontal
-        camera1.position.z = 55;  // Mantén la cámara más alejada pero con proporciones adecuadas
+        // Si el dispositivo es móvil y está en modo horizontal
+        camera1.fov = 20;  // Ajustamos el campo de visión (fov) para vista horizontal
+        camera1.position.z = 55;  // Ajustamos la cámara más lejana
     } else if (isMobile && !isLandscape) {
-        // Modo vertical en móviles
-        camera1.fov = 25;  
-        camera1.position.z = 50;  // Ajusta la cámara un poco más cerca
+        // Si el dispositivo es móvil y está en modo vertical
+        camera1.fov = 23;  
+        camera1.position.z = 63;  // Ajuste moderado para vista vertical
     } else {
-        // Dispositivos más grandes (tablets o desktops)
-        camera1.fov = 10; // Valores originales para pantallas grandes
+        // Para dispositivos que no son móviles o resoluciones más grandes
+        camera1.fov = 10; // Campo de visión original para pantallas grandes
         camera1.position.z = 53; // Posición original de la cámara
     }
 
@@ -276,8 +276,10 @@ const adjustForOrientation = () => {
     renderer1.setSize(window.innerWidth, window.innerHeight);
 };
 
-// Escucha para detectar cambios en la orientación y tamaño de pantalla
-window.addEventListener('resize', adjustForOrientation);
+// Evento para detectar cambios de orientación (horizontal/vertical)
+window.addEventListener('resize', () => {
+    adjustForOrientation();
+});
 
-// Llamada inicial para aplicar el ajuste según el tamaño actual de la pantalla
+// Llamada inicial para asegurarse de que el ajuste se aplique según la orientación actual
 adjustForOrientation();
