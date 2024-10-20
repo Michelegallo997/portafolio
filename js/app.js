@@ -252,17 +252,19 @@ window.addEventListener('resize', () => {
 
 
 // *** AJUSTES PARA DISPOSITIVOS MÓVILES Y CAMBIO DE ORIENTACIÓN ***
+
+// Función para ajustar el modelo 3D en dispositivos móviles cuando cambia la orientación
 const adjustForOrientation = () => {
     const isLandscape = window.matchMedia("(orientation: landscape)").matches; // Detectar si está en modo horizontal
     const isMobile = window.innerWidth <= 768; // Consideramos que es móvil si el ancho es menor o igual a 768px
 
     if (isMobile && isLandscape) {
         // Si el dispositivo es móvil y está en modo horizontal
-        camera1.fov = 20;  // Ajustamos el campo de visión (fov) para vista horizontal
+        camera1.fov = 30;  // Ajustamos el campo de visión (fov) para vista horizontal
         camera1.position.z = 55;  // Ajustamos la cámara más lejana
     } else if (isMobile && !isLandscape) {
         // Si el dispositivo es móvil y está en modo vertical
-        camera1.fov = 23;  
+        camera1.fov = 16;  
         camera1.position.z = 63;  // Ajuste moderado para vista vertical
     } else {
         // Para dispositivos que no son móviles o resoluciones más grandes
@@ -274,9 +276,11 @@ const adjustForOrientation = () => {
     renderer1.setSize(window.innerWidth, window.innerHeight);
 };
 
-// Detectar el cambio de orientación y actualizar solo el modelo
-window.addEventListener('orientationchange', function() {
-    // Solo actualiza el modelo 3D y la cámara en vez de recargar toda la página
+// Evento para detectar cambios de orientación (horizontal/vertical)
+window.addEventListener('resize', () => {
     adjustForOrientation();
-    reRender3D(); // Llamamos a la función de re-renderizado del modelo 3D
 });
+
+// Llamada inicial para asegurarse de que el ajuste se aplique según la orientación actual
+adjustForOrientation();
+
