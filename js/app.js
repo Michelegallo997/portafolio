@@ -260,7 +260,7 @@ const adjustForOrientation = () => {
 
     if (isMobile && isLandscape) {
         // Si el dispositivo es móvil y está en modo horizontal
-        camera1.fov = 30;  // Ajustamos el campo de visión (fov) para vista horizontal
+        camera1.fov = 20;  // Ajustamos el campo de visión (fov) para vista horizontal
         camera1.position.z = 55;  // Ajustamos la cámara más lejana
     } else if (isMobile && !isLandscape) {
         // Si el dispositivo es móvil y está en modo vertical
@@ -284,3 +284,10 @@ window.addEventListener('resize', () => {
 // Llamada inicial para asegurarse de que el ajuste se aplique según la orientación actual
 adjustForOrientation();
 
+
+
+// Detectar el cambio de orientación y recargar la página cuando sea necesario
+window.addEventListener('orientationchange', function() {
+    // Recarga la página cuando cambie la orientación
+    location.reload();
+});
