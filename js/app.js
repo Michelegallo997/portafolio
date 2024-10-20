@@ -283,3 +283,9 @@ window.addEventListener('resize', () => {
 
 // Llamada inicial para asegurarse de que el ajuste se aplique según la orientación actual
 adjustForOrientation();
+
+// Detectar el cambio de orientación y recargar la página cuando sea necesario
+window.addEventListener('orientationchange', function() {
+    // Recarga la página cuando cambie la orientación
+    location.reload();
+});
